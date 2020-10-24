@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burung Lovebird | SOAL 1</title>
+</head>
+<body>
+    <h1>Hitung banyaknya burung lovebird</h1>
+    <hr>
+    <p>Banyaknya burung lovebird : <span class="burung-lovebird"></span></p>
+    <p>Setiap berapa hari akan menetas : <span class="hari-akan-menetas"></span></p>
+    <p>Ingin berapa hari burung lovebird akan menetas : <span class="hari-berapa-banyak-akan-menetas"></span></p>
+    <p>Berapa persen burung lovebird akan mati : <span class="persen"></span></p>
+    <p>Hasil berapa kali burung lovebird akan menetas : <span class="hari-yang-sudah-di-hitung"></span></p>
+    <p>Hasil dalam <span class="hasil-dalam-441-hari"></span> hari</p>
+    <h2>Hasil akhir burung yang akan hidup : <span id="hasil-di-potong-persen"></span></h2>
+    
+    <script>
+        const burung_lovebird = 6.969
+        const hari_akan_menetas = 21
+        const hari_berapa_banyak_akan_menetas = 441
+        const persen = 11.1
+
+        const hari_yang_sudah_di_hitung = hari_berapa_banyak_akan_menetas / hari_akan_menetas
+
+        const hasil_dalam_441_hari = burung_lovebird * hari_yang_sudah_di_hitung
+        // document.write(hasil_dalam_441_hari)
+
+        const hasil_di_potong_persen = ( hasil_dalam_441_hari * 11.1 ) / 100
+        // console.log(hasil_di_potong_persen)
+
+        let burung_lovebird_dom = document.querySelector('.burung-lovebird')
+        let hari_akan_menetas_dom = document.querySelector('.hari-akan-menetas')
+        let hari_berapa_banyak_akan_menetas_dom = document.querySelector('.hari-berapa-banyak-akan-menetas')
+        let persen_dom = document.querySelector('.persen')
+        let hari_yang_sudah_di_hitung_dom = document.querySelector('.hari-yang-sudah-di-hitung')
+        let hasil_dalam_441_hari_dom = document.querySelector('.hasil-dalam-441-hari')
+        let hasil_di_potong_persen_dom = document.getElementById('hasil-di-potong-persen')
+
+        burung_lovebird_dom.innerHTML = burung_lovebird
+        hari_akan_menetas_dom.innerHTML = hari_akan_menetas
+        hari_berapa_banyak_akan_menetas_dom.innerHTML = hari_berapa_banyak_akan_menetas
+        persen.innerHTML = persen
+        hari_yang_sudah_di_hitung_dom.innerHTML = hari_yang_sudah_di_hitung
+        hasil_dalam_441_hari_dom.innerHTML = hasil_dalam_441_hari
+        hasil_di_potong_persen_dom.innerHTML = hasil_di_potong_persen
+    </script>
+</body>
+</html>
